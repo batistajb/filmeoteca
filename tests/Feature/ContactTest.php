@@ -2,20 +2,18 @@
 
 namespace Tests\Feature;
 
-use App\Models\Address;
+use App\Models\Contact;
 use App\Models\User;
-use App\Services\UserService;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\App;
 use Tests\TestCase;
 
-class AddressTest extends TestCase
+class ContactTest extends TestCase
 {
     use DatabaseTransactions;
 
 
 
-    public  function testCreateUserAddress()
+    public  function testCreateUserContact()
     {
         $user = User::create(
             [
@@ -33,21 +31,16 @@ class AddressTest extends TestCase
 
         for($i=0; $i<$cont; $i++)
         {
-            $userAddress = Address::create(
+            Contact::create(
                 [
-                    'street'     =>'Admin User Rua'.$i,
-                    'district'   =>'Admin User Bairro'.$i,
-                    'number'     =>'000'.$i,
-                    'uf'         =>'XX'.$i,
-                    'cep'        =>'00.000-00'.$i,
-                    'city'       =>'Admin User Cidade'.$i,
+                    'phone'     => '1234-56789',
                     'user_id'    =>$user->id,
                 ]
             );
         }
 
-        $addresses= $user->addresses->count();
-        $this->assertEquals($cont, $addresses);
+        $contacts= $user->contacts->count();
+        $this->assertEquals($cont, $contacts);
     }
 
 }

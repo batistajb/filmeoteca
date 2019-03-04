@@ -15,21 +15,39 @@ class AddressTest extends TestCase
 
 
 
-    public  function testCreateUserAddress($id)
+    public  function testCreateUserAddress()
     {
-       $userAddress = Address::create(
-           [
-               'street'     =>'Admin User Rua',
-               'district'   =>'Admin User Bairro',
-               'number'     =>'000',
-               'uf'         =>'XX',
-               'cep'        =>'00.000-000',
-               'city'       =>'Admin User Cidade',
-               'user_id'    =>$id
-           ]
-       );
-       $addreeses = Address::where('user_id',$id)->count();
-        $this->$addreeses;
+        $user = User::create(
+            [
+                'name'     =>'Admin User',
+                'email'     =>'adminuser@admin.com',
+                'password'  =>bcrypt(123456),
+                'cpf'       =>'xxx.xxx.xxx-xx',
+                'rg'        =>'mg-xx.xxxx',
+                'title'     =>'Admin User',
+                'rule'      =>'admin'
+            ]
+        );
+
+        $cont = 5;
+
+        for($i=0; $i<$cont; $i++)
+        {
+            Address::create(
+                [
+                    'street'     =>'Admin User Rua'.$i,
+                    'district'   =>'Admin User Bairro'.$i,
+                    'number'     =>'000'.$i,
+                    'uf'         =>'XX'.$i,
+                    'cep'        =>'00.000-00'.$i,
+                    'city'       =>'Admin User Cidade'.$i,
+                    'user_id'    =>$user->id,
+                ]
+            );
+        }
+
+        $addresses= $user->addresses->count();
+        $this->assertEquals($cont, $addresses);
     }
 
 }

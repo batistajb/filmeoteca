@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('cpf')->unique()->nullable();
             $table->string('rg')->unique()->nullable();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('rule')->default('user');
             $table->rememberToken();
             $table->timestamps();

@@ -72,7 +72,7 @@ class UserController extends Controller
         if($err){
             return view('user.create')->with('erro',$erro);
         }else{
-            Auth::attempt(['email' => $request['email'], 'password' => $request['password']]);
+            
             return redirect()->route('users')->with('msg','Inserido com sucesso!');
         }
     }

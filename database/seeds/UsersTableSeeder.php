@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
     public function run()
     {
         DB::table('users')->insert(
@@ -19,5 +18,21 @@ class UsersTableSeeder extends Seeder
                 'rule'      =>'admin'
             ]
         );
+
+
+
+        for ($i=1;$i<16;$i++)
+        {
+            $favorites = new \App\Models\Favorite();
+            $favorites->user_id   = $i;
+            $favorites->movie_id  = $i;
+            $favorites->save();
+            $favorite = \App\Models\Favorite::find($i);
+            $favorite->cont =  $favorite->cont + 1;
+            $favorite->save();
+        }
+
+
+
     }
 }

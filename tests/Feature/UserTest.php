@@ -4,9 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Address;
 use App\Models\User;
-use App\Services\UserService;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\App;
 use Tests\TestCase;
 
 class UserTest extends TestCase

@@ -1,7 +1,6 @@
 <?php
 
-use App\Models\User;
-use Illuminate\Support\Str;
+use App\Models\Movie;
 use Faker\Generator as Faker;
 
 /*
@@ -15,17 +14,12 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(Movie::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'title' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'rule' => 'user',
-        'cpf' => Str::random(10),
-        'rg' => Str::random(10),
-        'password' => bcrypt(123456), // password
-        'remember_token' => Str::random(10),
+        'title'     => $faker->lastName,
+        'year'      =>$faker->year,
+        'director'  => $faker->name,
+        'image'     =>'filmes.jpg',
     ];
 });
 

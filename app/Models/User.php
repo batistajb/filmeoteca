@@ -3,11 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
-use App\Models\Permission;
-use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {

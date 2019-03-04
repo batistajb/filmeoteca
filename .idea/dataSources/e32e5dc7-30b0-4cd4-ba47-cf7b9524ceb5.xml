@@ -1207,20 +1207,19 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="247" name="created_at">
+    <column id="288" parent="247" name="image">
       <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>varchar(191)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="247" name="updated_at">
+    <column id="289" parent="247" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="247" name="image">
+    <column id="290" parent="247" name="updated_at">
       <Position>7</Position>
-      <DataType>varchar(191)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="291" parent="247" name="PRIMARY">

@@ -5,11 +5,7 @@ use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
     public function run()
     {
         DB::table('users')->insert(

@@ -53,20 +53,25 @@ class HomeController extends Controller
             ->get();
 
 
+        $cont = 0;
+
         foreach ($favorites as $favorite)
         {
              $movieChart['title'][] = $favorite->movie['title'];
              $movieChart['cont'][] = $favorite['cont'];
+            $cont = 1;
         }
 
-        if(empty($favorites))
+
+        if( $cont == 1)
         {
             $chart = new \App\Charts\Favorite();
             $chart->labels($movieChart['title']);
             $chart->dataset('Filmes mais vistos', 'radar', $movieChart['cont']);
+            return view('dashboard', compact('clients','favorites','chart'));
         }
 
-        return view('dashboard', compact('clients','favorites','chart'));
+        return view('dashboard', compact('clients','favorites'));
     }
 
     public function home()

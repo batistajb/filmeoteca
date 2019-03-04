@@ -1,0 +1,36 @@
+<?
+namespace App\Services;
+
+use App\Models\Address;
+use App\Models\User;
+
+class UserService
+{
+    public function create($data)
+    {
+       $user = User::create([
+            'name'     =>$data['name'],
+            'email'     =>$data['email'],
+            'password'  =>bcrypt($data['password']),
+            'cpf'       =>$data['cpf'],
+            'rg'        =>$data['rg'],
+            'title'     =>$data['title'],
+            'rule'      =>$data['rule']
+        ]);
+
+       Address::create(
+           [
+               'street'     =>$data['street'],
+               'district'   =>$data['district'],
+               'number'     =>$data['number'],
+               'uf'         =>$data['uf'],
+               'cep'        =>$data['cep'],
+               'city'       =>$data['city'],
+               'user_id'    =>$user->id
+           ]
+       );
+    }
+}
+
+
+

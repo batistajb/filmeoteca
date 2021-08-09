@@ -44,7 +44,7 @@
                 <tbody>
                 @forelse($movies as $movie)
                     <tr>
-                        <td> <img src="<?=App::make('url')->to('storage/app/public/imageMovie/'.$movie->image);?>" alt="{{ $movie->title }}" style="width: 60px"/> </td>
+                        <td> <img src="<?=App::make('url')->to('storage/imageMovie/'.$movie->image);?>" alt="{{ $movie->title }}" style="width: 60px"/> </td>
                         <td>{{$movie->title}}</td>
                         <td>{{$movie->year}}</td>
                         <td>{{$movie->director}}</td>

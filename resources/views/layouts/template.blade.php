@@ -9,14 +9,14 @@
 
     <title>Filmeoteca</title>
     <!-- Bootstrap -->
-    <link href="<?=App::make('url')->to('/');?>/resources/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
 
     <!-- Custom icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="<?=App::make('url')->to('/');?>/resources/assets/css/dashboard.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet">
 
     <body>
 
@@ -102,18 +102,19 @@
     </div>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
 
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?=App::make('url')->to('/');?>/resources/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=App::make('url')->to('/');?>/resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?=App::make('url')->to('/');?>/resources/js/mask/jquery.maskedinput.min.js"></script>
+    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/mask/jquery.maskedinput.min.js') }}"></script>
 
 
     <!-- Charts-->
 
-    <script src="<?=App::make('url')->to('/');?>/resources/js/dashboard.js"></script>
+<!--    <script src="{{ asset('js/dashboard.js') }}"></script>-->
 
     @yield('scripts')
 

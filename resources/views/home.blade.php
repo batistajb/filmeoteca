@@ -29,7 +29,7 @@
                             @if(!empty($moviesFavorites))
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
-                                        <img class="d-block img-fluid" src="<?=App::make('url')->to('storage/app/public/imageMovie/'. $moviesFavorites['image'][0]);?>" alt="{{$moviesFavorites['title'][0]}}" style="width: 900px;height: 500px">
+                                        <img class="d-block img-fluid" src="<?=App::make('url')->to('storage/imageMovie/'. $moviesFavorites['image'][0]);?>" alt="{{$moviesFavorites['title'][0]}}" style="width: 900px;height: 500px">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h4>{{$moviesFavorites['title'][0]}}</h4>
                                             <h6>Diretor: {{$moviesFavorites['director'][0]}}</h6>
@@ -38,7 +38,7 @@
                                     </div>
                                     @if(!empty($moviesFavorites['image'][1]))
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="<?=App::make('url')->to('storage/app/public/imageMovie/'. $moviesFavorites['image'][1]);?>" alt="{{$moviesFavorites['title'][1]}}" style="width: 900px;height: 500px">
+                                            <img class="d-block img-fluid" src="<?=App::make('url')->to('storage/imageMovie/'. $moviesFavorites['image'][1]);?>" alt="{{$moviesFavorites['title'][1]}}" style="width: 900px;height: 500px">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h4>{{$moviesFavorites['title'][1]}}</h4>
                                                 <h6>{{$moviesFavorites['director'][1]}}</h6>
@@ -48,7 +48,7 @@
                                     @endif
                                     @if(!empty($moviesFavorites['image'][2]))
                                         <div class="carousel-item">
-                                            <img class="d-block img-fluid" src="<?=App::make('url')->to('storage/app/public/imageMovie/'. $moviesFavorites['image'][2]);?>" alt="{{$moviesFavorites['title'][2]}}" style="width: 900px;height: 500px">
+                                            <img class="d-block img-fluid" src="<?=App::make('url')->to('storage/imageMovie/'. $moviesFavorites['image'][2]);?>" alt="{{$moviesFavorites['title'][2]}}" style="width: 900px;height: 500px">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h4>{{$moviesFavorites['title'][2]}}</h4>
                                                 <h6>Diretor: {{$moviesFavorites['director'][2]}}</h6>
@@ -75,7 +75,7 @@
                     @foreach($movies as $movie)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-30">
-                                <a><img class="card-img-top" src="<?=App::make('url')->to('storage/app/public/imageMovie/'. $movie->image);?>" alt="" style="width: 275px; height: 150px"></a>
+                                <a><img class="card-img-top" src="<?=App::make('url')->to('storage/imageMovie/'. $movie->image);?>" alt="" style="width: 275px; height: 150px"></a>
                                 <div class="card-body">
                                     <h4 class="card-title">
                                         <a style="color: #4aa0e6">{{$movie->title}}</a>

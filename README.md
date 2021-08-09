@@ -1,4 +1,4 @@
-##Prova CROMG
+<h2>Prova CROMG</h2>
 
 Para utilizar o projeto basta rodar as migrations ou se preferir utilizar o dump do BD que está na raiz do projeto.
 

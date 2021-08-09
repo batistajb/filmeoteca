@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fef5a0f3-f7c0-4d41-ad59-73f4db89e165" name="Default" comment="Ajuste README.md e namespace do Chartjs">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/laravel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/laravel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,7 +397,7 @@
       <workItem from="1551580688007" duration="2289000" />
       <workItem from="1551658509484" duration="38200000" />
       <workItem from="1628516376105" duration="3945000" />
-      <workItem from="1628520622178" duration="790000" />
+      <workItem from="1628520622178" duration="1240000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste README.md e namespace do Chartjs">
       <created>1628520247043</created>
@@ -413,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628521192000</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajuste README.md e namespace do Chartjs">
+      <created>1628521416361</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628521416361</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">

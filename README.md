@@ -1,4 +1,5 @@
-<h2>Prova CROMG</h2>
+<h2>Prova CROMG</h2>  ![GitHub Workflow Status](https://github.com/batistajb/filmeoteca/actions/workflows/laravel.yml/badge.svg)
+
 
 Para utilizar o projeto basta rodar as migrations ou se preferir utilizar o dump do BD que está na raiz do projeto.
 

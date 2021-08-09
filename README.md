@@ -6,11 +6,12 @@ Para utilizar o projeto basta rodar as migrations ou se preferir utilizar o dump
 composer install
 ```
 
+Copie o arquivo .env.example e cole com o nome de .env
+
+
 ```
 php artisan migrate
 ```
-
-Copie o arquivo .env.example e cole com o nome de .env
 
 ```
 php artisan key:generate
